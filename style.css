@@ -1,0 +1,352 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background: linear-gradient(135deg, #fff5fa, #ffe4f0, #fff9fc);
+    color: #88536f;
+    overflow-x: hidden;
+}
+
+/* Шапка */
+
+header {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    color: #e88ab4;
+}
+
+.header-text {
+    font-size: 13px;
+    color: #bd829e;
+}
+
+/* Головний екран */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.flower {
+    font-size: 65px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.subtitle {
+    margin: 20px 0;
+    letter-spacing: 4px;
+    color: #d58caf;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 55px);
+    line-height: 1.5;
+    color: #a85f84;
+}
+
+h1 span {
+    font-family: 'Pacifico', cursive;
+    color: #ed8fb8;
+}
+
+.description {
+    max-width: 550px;
+    line-height: 1.9;
+    margin: 25px 0;
+    color: #a77c91;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f5a5c8, #e783b0);
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 7px 20px #ed9fc455;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 10px 25px #e88bb477;
+}
+
+.secondary {
+    background: white;
+    color: #db82ab;
+}
+
+.scroll-text {
+    margin-top: 65px;
+    color: #c99ab0;
+    font-size: 13px;
+}
+
+/* Картки */
+
+.cards {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.cards h2,
+.final-section h2 {
+    color: #b66c91;
+    font-size: 29px;
+}
+
+.section-description {
+    margin: 15px 0 40px;
+    color: #b18ba0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #ffffffc9;
+    padding: 35px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #e8a7c222;
+    border: 1px solid #ffffff;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px #e99aba44;
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #c5759b;
+}
+
+.card p {
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+/* Фінальний блок */
+
+.final-section {
+    margin: 50px auto;
+    max-width: 850px;
+    padding: 65px 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff, #ffe8f2);
+    border-radius: 35px;
+    box-shadow: 0 10px 40px #e8a7c233;
+}
+
+.big-heart {
+    font-size: 80px;
+    color: #ec8eb8;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-section p {
+    max-width: 600px;
+    margin: 25px auto;
+    line-height: 2;
+    color: #a77c91;
+}
+
+#random-message {
+    margin-top: 25px;
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    color: #e58ab4;
+}
+
+/* Модальні віконця */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #8d537b88;
+    backdrop-filter: blur(7px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+    animation: fadeIn .3s;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #fff, #fff0f7);
+    width: 100%;
+    max-width: 480px;
+    padding: 45px 30px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 70px #69304d44;
+    animation: popUp .4s;
+}
+
+.modal-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    color: #cf78a1;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    line-height: 1.9;
+    font-size: 14px;
+    color: #a67a91;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    padding: 5px 12px;
+    font-size: 25px;
+    color: #ce7ca1;
+    background: #ffe6f1;
+    box-shadow: none;
+}
+
+.compliment-list p {
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 8px 0;
+}
+
+/* Літаючі сердечка */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    color: #f3a0c4;
+    pointer-events: none;
+    animation: rise 7s linear forwards;
+    z-index: 0;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-15px) rotate(8deg);
+    }
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    line-height: 2;
+    color: #d18cac;
+    font-size: 13px;
+}
+
+/* Версія для телефонів */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .cards h2,
+    .final-section h2 {
+        font-size: 23px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        padding: 40px 20px;
+    }
+}

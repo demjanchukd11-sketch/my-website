@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для найкращої сестрички 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<header>
+    <div class="logo">♡ Для тебе ♡</div>
+    <div class="header-text">Маленький світ щастя</div>
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <div class="flower">🌸</div>
+
+        <p class="subtitle">ДЛЯ ОСОБЛИВОЇ ЛЮДИНИ</p>
+
+        <h1>
+            Ти заслуговуєш<br>
+            <span>на все найпрекрасніше!</span>
+        </h1>
+
+        <p class="description">
+            Цей маленький куточок інтернету створений
+            спеціально для тебе, моя дорога сестричко! 💗
+        </p>
+
+        <div class="hero-buttons">
+
+            <button onclick="openModal('greeting')">
+                💌 Відкрити привітання
+            </button>
+
+            <button class="secondary" onclick="openModal('compliments')">
+                🎀 Натисни на мене
+            </button>
+
+        </div>
+
+        <div class="scroll-text">
+            Гортай нижче, на тебе чекають сюрпризи ↓
+        </div>
+
+    </section>
+
+
+    <section class="cards">
+
+        <h2>Трішки магії для тебе ✨</h2>
+
+        <p class="section-description">
+            Обирай будь-яку кнопку — кожна приховує щось приємне!
+        </p>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <div class="card-icon">💗</div>
+
+                <h3>Ти прекрасна!</h3>
+
+                <p>
+                    Ніколи не забувай, наскільки ти особлива.
+                </p>
+
+                <button onclick="openModal('love')">
+                    Дізнатися чому
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🌷</div>
+
+                <h3>Посміхнись!</h3>
+
+                <p>
+                    Тут захована порція гарного настрою.
+                </p>
+
+                <button onclick="openModal('mood')">
+                    Отримати усмішку
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🎁</div>
+
+                <h3>Сюрприз!</h3>
+
+                <p>
+                    Для тебе є дещо особливе.
+                </p>
+
+                <button onclick="openModal('surprise')">
+                    Відкрити сюрприз
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="final-section">
+
+        <div class="big-heart">♡</div>
+
+        <h2>Пам'ятай одну важливу річ...</h2>
+
+        <p>
+            Ти ніколи не повинна сумніватися в собі.
+            Ти сильна, красива, добра та неймовірна.
+            Нехай кожен твій день буде наповнений
+            любов'ю, посмішками та маленькими дивами!
+        </p>
+
+        <button onclick="showRandomMessage()">
+            ✨ Мені потрібно трішки щастя
+        </button>
+
+        <div id="random-message"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    Зроблено з безмежною любов'ю 💗
+
+    <br>
+
+    Для найкращої сестрички у світі!
+
+</footer>
+
+
+<!-- МОДАЛЬНІ ВІКОНЦЯ -->
+
+
+<div class="modal" id="greeting">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div class="modal-icon">💌</div>
+
+        <h2>Моя дорога сестричко!</h2>
+
+        <p>
+            Я хочу побажати тобі безмежного щастя,
+            щирих посмішок, здійснення найзаповітніших мрій
+            та неймовірних пригод!
+
+            <br><br>
+
+            Нехай поруч завжди будуть люди, які цінують тебе.
+            Ніколи не переставай мріяти, сяяти та бути собою.
+
+            <br><br>
+
+            Ти — справжній скарб!
+            Я тебе дуже люблю! 💗
+        </p>
+
+        <button onclick="closeModal()">
+            Міцно обіймаю! 💕
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="compliments">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div class="modal-icon">🎀</div>
+
+        <h2>А ти знаєш, яка ти?</h2>
+
+        <div class="compliment-list">
+
+            <p>🌸 Неймовірно красива</p>
+
+            <p>💗 Дуже добра</p>
+
+            <p>✨ Унікальна та неповторна</p>
+
+            <p>🦋 Сильна та талановита</p>
+
+            <p>🌷 Найчудовіша сестра!</p>
+
+        </div>
+
+        <button onclick="closeModal()">
+            Я посміхаюся! 🥰
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="love">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div class="modal-icon">💖</div>
+
+        <h2>Чому ти особлива?</h2>
+
+        <p>
+            Тому що ти — це ти!
+
+            Твоя посмішка робить світ світлішим,
+            твій сміх здатний прогнати сум,
+            а твоя присутність робить життя прекраснішим.
+
+            <br><br>
+
+            Не порівнюй себе ні з ким.
+            Ти вже прекрасна!
+        </p>
+
+        <button onclick="closeModal()">
+            Дякую! 💗
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="mood">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div class="modal-icon">🌈</div>
+
+        <h2>Лови порцію щастя!</h2>
+
+        <p id="mood-text">
+            Ти впораєшся з усім!
+            А зараз просто посміхнись 💕
+        </p>
+
+        <button onclick="newMood()">
+            Ще хороших слів!
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="surprise">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div class="modal-icon">🎁</div>
+
+        <h2>Таємне послання!</h2>
+
+        <p>
+            Якби мені довелося обирати сестру
+            серед усіх людей на планеті,
+            я б знову обрав(ла) саме тебе!
+
+            <br><br>
+
+            Ти моя рідна людина.
+            І це найкращий подарунок! 💗
+        </p>
+
+        <button onclick="createConfetti(); closeModal()">
+            Міцно обіймаю! 💞
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
